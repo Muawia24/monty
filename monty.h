@@ -77,6 +77,7 @@ void _push(stack_t **stack, unsigned int num);
 void _pall(stack_t **stack, unsigned int num);
 void _pint(stack_t **stack, unsigned int num);
 void _pop(stack_t **stack, unsigned int num);
+void _swap(stack_t **stack, unsigned int num);
 
 /* d_lists.c linked list functions*/
 
