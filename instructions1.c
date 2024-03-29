@@ -21,3 +21,14 @@ void _add(stack_t **stack, unsigned int num)
 	(*stack)->prev = NULL;
 	free(temp);
 }
+/**
+ * _nop - doesn't do anything
+ * @stack: top of stack
+ * @num: file line number
+ * Return: nothing
+ */
+void _nop(stack_t **stack, unsigned int num)
+{
+	(void)*stack;
+	(void)num;
+}
