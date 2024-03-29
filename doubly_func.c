@@ -17,7 +17,7 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
-		printf("Error: malloc failed");
+		dprintf(2, "Error: malloc failed");
 		free_globs();
 		exit(EXIT_FAILURE);
 	}
@@ -54,7 +54,7 @@ stack_t *add_dnodeint_end(stack_t **head, const int n)
 
 	if (new == NULL)
 	{
-		printf("Error: malloc failed");
+		dprintf(2, "Error: malloc failed");
 		free_globs();
 		exit(EXIT_FAILURE);
 	}

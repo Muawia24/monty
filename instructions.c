@@ -12,15 +12,15 @@ void _push(stack_t **stack, unsigned int num)
 
 	if (!globs.arg)
 	{
-		printf("L%u: usage: push integer\n", num);
+		dprintf(2, "L%u: usage: push integer\n", num);
 		exit(EXIT_FAILURE);
 	}
 
 	for (i = 0; globs.arg[i] != '\0'; i++)
 	{
-		if (!isdigit(globs.arg[i]))
+		if (!isdigit(globs.arg[i]) && globs.arg[i] != '-')
 		{
-			printf("L%u: usage: push integer\n", num);
+			dprintf(2, "L%u: usage: push integer\n", num);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -57,7 +57,7 @@ void _pint(stack_t **stack, unsigned int num)
 {
 	if (*stack == NULL)
 	{
-		printf("L%u: can't pint, stack empty", num);
+		dprintf(2, "L%u: can't pint, stack empty", num);
 		free_globs();
 		exit(EXIT_FAILURE);
 	}
@@ -75,7 +75,7 @@ void _pop(stack_t **stack, unsigned int num)
 
 	if (stack == NULL || *stack == NULL)
 	{
-		printf("L%u: can't pop an empty stack", num);
+		dprintf(2, "L%u: can't pop an empty stack", num);
 		free_globs();
 		exit(EXIT_FAILURE);
 	}

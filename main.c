@@ -39,14 +39,14 @@ FILE *check_args(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("USAGE: monty file\n");
+		dprintf(2, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
 	fd = fopen(argv[1], "r");
 	if (fd == NULL)
 	{
-		printf("Error: Can't open file %s\n", argv[1]);
+		dprintf(2, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	return (fd);
@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
 
 			if (!f)
 			{
-				printf("L%d: unknown instruction %s\n", globs.count, lines[0]);
+				dprintf(2, "L%d: unknown instruction %s\n", globs.count, lines[0]);
 				free_globs();
 				exit(EXIT_FAILURE);
 			}
