@@ -62,7 +62,7 @@ void _pchar(stack_t **stack, unsigned int num)
 {
 	if (*stack == NULL)
 	{
-		dprintf(2, "L%u: can't pchar, stack too short\n", num);
+		dprintf(2, "L%u: can't pchar, stack empty\n", num);
 		free_globs();
 		exit(EXIT_FAILURE);
 	}
