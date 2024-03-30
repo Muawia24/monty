@@ -35,7 +35,7 @@ void _mod(stack_t **stack, unsigned int num)
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		dprintf(2, "L%u: can't div, stack too short\n", num);
+		dprintf(2, "L%u: can't mod, stack too short\n", num);
 		free_globs();
 		exit(EXIT_FAILURE);
 	}
