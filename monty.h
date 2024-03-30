@@ -85,6 +85,7 @@ void _div(stack_t **stack, unsigned int num);
 void _mul(stack_t **stack, unsigned int num);
 void _mod(stack_t **stack, unsigned int num);
 void _pchar(stack_t **stack, unsigned int num);
+void _pstr(stack_t **stack, unsigned int num);
 
 /* d_lists.c linked list functions*/
 
