@@ -88,9 +88,9 @@ void _pstr(stack_t **stack, unsigned int num)
 
 	while (*stack && (*stack)->n >= 0 && (*stack)->n <= 127)
 	{
+		printf("%c", (*stack)->n);
 		if ((*stack)->n == 0)
 			break;
-		printf("%c", (*stack)->n);
 		*stack = (*stack)->next;
 	}
 
