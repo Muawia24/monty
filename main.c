@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 	while (nline != -1)
 	{
 		lines[0] = strtok(globs.buf, " \t\n");
-		if (lines[0])
+		if (lines[0] && lines[0][0] != '#')
 		{
 			f = get_opcode(lines[0]);
 

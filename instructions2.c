@@ -51,3 +51,28 @@ void _mod(stack_t **stack, unsigned int num)
 	(*stack)->prev = NULL;
 	free(temp);
 }
+/**
+ * _pchar - prints the char at the top of the stack,
+ *  followed by a new line.
+ *  @stack: top of stack
+ *  @num: file line number
+ *  Return: nothing
+ */
+void _pchar(stack_t **stack, unsigned int num)
+{
+	if (*stack == NULL)
+	{
+		dprintf(2, "L%u: can't pchar, stack too short\n", num);
+		free_globs();
+		exit(EXIT_FAILURE);
+	}
+
+	if ((*stack)->n < 0 || (*stack)->n > 127)
+	{
+		dprintf(2, "L%u: can't pchar, value out of range\n", num);
+		free_globs();
+		exit(EXIT_FAILURE);
+	}
+
+	printf("%c\n", (*stack)->n);
+}
