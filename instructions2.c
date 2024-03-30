@@ -85,12 +85,14 @@ void _pchar(stack_t **stack, unsigned int num)
  */
 void _pstr(stack_t **stack, unsigned int num)
 {
+	stack_t *temp = *stack;
+
 	(void)num;
 
-	while (*stack && (*stack)->n > 0 && (*stack)->n <= 127)
+	while (temp && temp->n > 0 && temp->n <= 127)
 	{
-		printf("%c", (*stack)->n);
-		*stack = (*stack)->next;
+		printf("%c", temp->n);
+		temp = temp->next;
 	}
 
 	printf("\n");
