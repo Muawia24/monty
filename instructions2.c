@@ -79,6 +79,7 @@ void _pchar(stack_t **stack, unsigned int num)
 /**
  * _pstr -  prints the string starting at the top of the stack,
  *  followed by a new line.
+ *  @stack: top of stack
  *  @num: file line number
  *  Return: nothing
  */
@@ -86,11 +87,9 @@ void _pstr(stack_t **stack, unsigned int num)
 {
 	(void)num;
 
-	while (*stack && (*stack)->n >= 0 && (*stack)->n <= 127)
+	while (*stack && (*stack)->n > 0 && (*stack)->n <= 127)
 	{
 		printf("%c", (*stack)->n);
-		if ((*stack)->n == 0)
-			break;
 		*stack = (*stack)->next;
 	}
 
