@@ -80,6 +80,7 @@ void _pop(stack_t **stack, unsigned int num);
 void _swap(stack_t **stack, unsigned int num);
 void _add(stack_t **stack, unsigned int num);
 void _nop(stack_t **stack, unsigned int num);
+void _sub(stack_t **stack, unsigned int num);
 
 /* d_lists.c linked list functions*/
 
