@@ -52,3 +52,29 @@ void _rotr(stack_t **stack, unsigned int num)
 
 	*stack = tail;
 }
+/**
+ * _stack - sets the format of the data to a stack (LIFO)
+ * @stack: top of stack
+ * @num: file line number
+ * Return: nothing
+ */
+void _stack(stack_t **stack, unsigned int num)
+{
+	(void)*stack;
+	(void)num;
+
+	globs.lifo = 1;
+}
+/**
+ * _queue - sets the format of the data to a queue (FIFO)
+ * @stack: top of stack
+ * @num: file line number
+ * Return: nothing
+ */
+void _queue(stack_t **stack, unsigned int num)
+{
+	(void)*stack;
+	(void)num;
+
+	globs.lifo = 0;
+}

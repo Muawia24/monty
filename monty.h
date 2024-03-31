@@ -88,6 +88,8 @@ void _pchar(stack_t **stack, unsigned int num);
 void _pstr(stack_t **stack, unsigned int num);
 void _rotl(stack_t **stack, unsigned int num);
 void _rotr(stack_t **stack, unsigned int num);
+void _queue(stack_t **stack, unsigned int num);
+void _stack(stack_t **stack, unsigned int num);
 
 /* d_lists.c linked list functions*/
 
